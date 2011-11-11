@@ -1,13 +1,22 @@
 #personajes{
   border:4px solid black;
-  width:1050px;
-  height:600px;
-  margin:150px;
+  width:900px;
+  height:720px;
+  margin-top:50px;
+  margin-left:0 auto;
 }
 
 .personaje{
  
- width:200px;
+ height:200px;
+ margin-left: 20px;
+ margin-top: 20px;
+ border: solid 4px black;
+}
+
+.personaje:hover{
+border: solid  4px red;
+
 }
 
 .caractersitica{
@@ -18,33 +27,44 @@
   
 }
 
-#jugar{
- 
-  margin-left:600px;
-  margin-bottom:120px;
+
+#informacion{
+float: right;
+border: 3px solid black;
+position: relative;
+width: 500px;
+height: 320px;
+right: 100px;
+top: 175px;
+}
+
+#informacion p{
+margin-top: -10px;
+font-size:20px;
 
 }
 
-#pop{
-z-index:2;
-position:absolute;
-border:1px solid #333333;
+#texto{
 text-align:center;
-background:#000000;
 }
 
-#cerrar{
- float:right;
- margin-right:5px;
- cursor:pointer;
- font:Verdana, Arial, Helvetica, sans-serif;
- font-size:12px;
- font-weight:bold;
- color:#ffffff;
- background-color:#666666;
- width:12px;
- position:relative;
- margin-top:-1px;
- text-align:center;
-
+#InformacionUsuario{
+position: absolute;
+border: solid black;
+width: 300px;
+height: 200px;
+left: 1000px;
+top:280px;
 }
+
+#jugar{
+margin-top: 40px;
+margin-left: 100px;
+}
+
+.nombreJugador{
+margin-top:50px;
+margin-left: 30px;
+}
+
+
