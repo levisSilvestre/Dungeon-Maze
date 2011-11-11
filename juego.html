@@ -1,32 +1,43 @@
 <html>
  <head>
  <link href="juego.css" rel="stylesheet" type="text/css"/>
- <script src="jquery.js" type="text/javascript" language="javascript"></script>
+ <script src="jquery-1.6.4.js"></script>
  <script src="juego.js" type="text/javascript" language="javascript"></script>
  </head>
  <body>
-   
+	
+	<div id="InformacionUsuario">
+	<label class="nombreJugador">Nombre </label>
+	<input type="text" class="nombreJugador" /><br/>
+	<input type="button" id="jugar" value="Comenza juego" />
+	</div>
+	
     <div id=personajes>
-	   <image src="guerrero.jpg" class="personaje"></image>
-	   <input type="radio" id="" >
-	   <input type="button" id="guerreroCar" class="caractersitica" value="caracteristicas">
-	   
-	   <image src="sacerdote.jpg" class="personaje"></image>
-	   <input type="radio" id=""  >
-	   <input type="button" id="clerigoCar" class="caractersitica" value="caracteristicas">
-	   
-	   <image src="valkiria.gif" class="personaje"></image>
-	   <input type="radio" id="">
-	   <input type="button" id="ValkiriaCar" class="caractersitica" value="caracteristicas">
+	
+	<div id="informacion">
+		<div id="texto">
+			<h1 id="descripcion">Dungeon Maze</h1><br/>
+			<p id="ataque">Elije tu Personaje</p><br/>
+			<p id="defensa"></p><br/>
+			<p id="daño"></p><br/>
+			<p id="vida"></p>
+		</div>
+		
+	</div>
+	
+		<image src="guerrero.jpg" class="personaje" id="guerrero" ></image><br/>
+		<image src="sacerdote.jpg" class="personaje" id="clerigo" ></image><br/>
+		<image src="valkiria.jpg" class="personaje" id="valkiria" ></image>
+
+	  
+	
 	   
 	</div>
 	
-	<input type="button" id="jugar" value="Comenza juego">
 	
-	<div id="pop">
-	 <div id="cerrar">x</div>
-	 <p>ndfklgbsfnasdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfd</p>
-	</div>
+	
+	
+	
 	
  
  
