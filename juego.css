@@ -1,3 +1,5 @@
+/* Ininio */
+
 #personajes{
   border:4px solid black;
   width:900px;
@@ -15,7 +17,7 @@
 }
 
 .personaje:hover{
-border: solid  4px red;
+	border: solid  4px red;
 
 }
 
@@ -29,43 +31,51 @@ border: solid  4px red;
 
 
 #informacion{
-float: right;
-border: 3px solid black;
-position: relative;
-width: 500px;
-height: 320px;
-right: 100px;
-top: 175px;
+	float: right;
+	border: 3px solid black;
+	position: relative;
+	width: 500px;
+	height: 320px;
+	right: 100px;
+	top: 175px;
 }
 
 #informacion p{
-margin-top: -10px;
-font-size:20px;
+	margin-top: -10px;
+	font-size:20px;
 
 }
 
 #texto{
-text-align:center;
+	text-align:center;
+}
+
+.descrip{
+	padding-top:15px;
 }
 
 #InformacionUsuario{
-position: absolute;
-border: solid black;
-width: 300px;
-height: 200px;
-left: 1000px;
-top:280px;
+	position: absolute;
+	border: solid black;
+	width: 300px;
+	height: 200px;
+	left: 1000px;
+	top:280px;
 }
 
 #jugar{
-margin-top: 40px;
-margin-left: 100px;
+	margin-top: 40px;
+	margin-left: 100px;
 }
 
 .nombreJugador{
-margin-top:50px;
-margin-left: 30px;
+	margin-top:50px;
+	margin-left: 30px;
 }
+
+
+
+/* Mapa1 */
 
 #mapa {
     width: 1300px;
@@ -78,21 +88,39 @@ margin-left: 30px;
 }
 
 .imagenes{
-width:50px;
-height:50px;
+	width:50px;
+	height:50px;
 }
 
 #accionesJugador{
-position:absolute;
-left:550px;
-top: 670px;
+	position:absolute;
+	left:900px;
+	top: 670px;
 }
 
 .acciones{
-width:100px;
-height:100px;
-border: solid black;
-float:left;
+	width:100px;
+	height:100px;
+	border: solid black;
+	float:left;
+}
+
+#DatosJugador{
+	width:650px;
+	height:100px;
+	border: solid black;
+	position: absolute;
+	top:670px;
+	left:80px;
+}
+
+#nombreJugador{
+	Font-Size:20px;
+}
+
+#DatosDelJugador{
+	font-size:20px;
+	text-align:center;
 }
 
 #jugador {
@@ -105,12 +133,33 @@ float:left;
     top: 0px;
 }
 
-#enemigo{
-    width: 50px;
+.enemigo{
+	width: 50px;
     height: 50px;
     border: 1px solid #000;
+}
+
+#goblin1{
     position: absolute;
-    left: 300px;
-    top: 100px;
+    left: 100px;
+    top: 500px;
+}
+
+#goblin2{
+    position: absolute;
+    left: 800px;
+    top: 500px;
+}
+
+#goblin3{
+    position: absolute;
+    left: 900px;
+    top: 0px;
+}
+
+#orco1{
+    position: absolute;
+    left: 1200px;
+    top: 500px;
 }
 

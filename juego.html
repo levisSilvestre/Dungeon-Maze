@@ -1,26 +1,33 @@
 <html>
  <head>
  <link href="juego.css" rel="stylesheet" type="text/css"/>
- <script src="jquery-1.6.4.js"></script>
+ <script src="jquery.js"></script>
  <script src="juego.js" type="text/javascript" language="javascript"></script>
  </head>
  <body>
 	
+	
+	
 	<div id="InformacionUsuario">
-	<label class="nombreJugador">Nombre </label>
-	<input type="text" class="nombreJugador" /><br/>
-	<input type="button" id="jugar" value="Comenza juego" />
+	
+		<form method="post" action="mapa1.php">
+		<label class="nombreJugador">Nombre </label>
+		<input name="nJugador" type="text" class="nombreJugador" /><br/>
+		<input id="tipoJuga" name="TipoJugador" type="hidden"/>
+		<input type="submit" id="jugar" value="Comenza juego" />
+		</form>
 	</div>
+	
 	
     <div id=personajes>
 	
 	<div id="informacion">
 		<div id="texto">
 			<h1 id="descripcion">Dungeon Maze</h1><br/>
-			<p id="ataque">Elije tu Personaje</p><br/>
-			<p id="defensa"></p><br/>
-			<p id="daño"></p><br/>
-			<p id="vida"></p>
+			<p id="ataque" class="descrip">Elije tu Personaje</p>
+			<p id="defensa" class="descrip"></p>
+			<p id="daño" class="descrip"></p>
+			<p id="vida" class="descrip"></p>
 		</div>
 		
 	</div>
