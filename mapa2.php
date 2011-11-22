@@ -6,14 +6,11 @@
 		<script type="text/javascript" src="miScript.js"></script>
 		<link rel="stylesheet" type="text/css" href="juego.css" />
 		
-		
-		
 	</head>
 	
 	<body onkeydown="moverNinja(event);">
 	
-	<input id ="nivel" type="button" value="EmpezarNivel ClickMe" onClick="datosEntrada(1)" />
-	
+	<input id ="nivel" type="button" value="EmpezarNivel ClickMe" onClick="datosEntrada(2)" />
 	
 		<div id="mapa">
 			<div id="jugador"><img id="imgJU" class="imagenes"/></div>
@@ -78,7 +75,7 @@
 		</div>
 		
 		<div id = "AvanzarNivel">
-		<form method="post" action="mapa2.php">
+		<form method="post" action="mapa3.php">
 		<input  name="nJugador" type="hidden" value="<?php echo $_POST["nJugador"]; ?>"/>
 		<input  name="TipoJugador" type="hidden" value ="<?php  echo $_POST["TipoJugador"]; ?>" type="hidden" />
 		<input id="vidaPersonajeE" name="VidaP"  type="hidden" />
@@ -86,14 +83,12 @@
 		</form>	
 		</div>
 		
-		
 		<div id = "perder">
 			<form method="post" action="juego.html">
 			
 			<input type="submit" id="derrota" value="Perdistes  CLICK ME" />
 		</form>	
 		</div>
-		
 	
 	</body>
 </html>

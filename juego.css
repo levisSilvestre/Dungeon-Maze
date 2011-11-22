@@ -1,11 +1,15 @@
 /* Ininio */
+#inicio{
+background-color: black;
+}
 
 #personajes{
-  border:4px solid black;
+  border:4px solid red;
   width:900px;
   height:720px;
   margin-top:50px;
   margin-left:0 auto;
+  background-color: white;
 }
 
 .personaje{
@@ -42,7 +46,8 @@
 
 #informacion p{
 	margin-top: -10px;
-	font-size:20px;
+	font-weight:bold;
+	font-size: 25px;
 
 }
 
@@ -61,6 +66,8 @@
 	height: 200px;
 	left: 1000px;
 	top:280px;
+	background-color: white;
+	border:4px solid red;
 }
 
 #jugar{
@@ -77,13 +84,30 @@
 
 /* Mapa1 */
 
+#nivel{
+	width:400px;
+	height: 400px;
+	border: solid black;
+	position: absolute;
+	left: 500px;
+	top: 100px;
+	font-size: 35px;
+	background-color: red;
+	color: white;
+}
+
+#nivel:hover{
+	background-color: white;
+	color: red;
+}
+
 #mapa {
     width: 1300px;
     height: 600px;
     border: 3px solid #000;
     position: relative;
 	left: 50px;
-	top: 40px;
+	top: 5px;
 	
 }
 
@@ -95,7 +119,46 @@
 #accionesJugador{
 	position:absolute;
 	left:900px;
-	top: 670px;
+	top: 645px;
+}
+
+#cambiarNivel{
+	width:400px;
+	height: 400px;
+	border: solid black;
+	position: absolute;
+	left: 500px;
+	top: 100px;
+	font-size: 40px;
+	background-color: red;
+	color: white;
+}
+
+#cambiarNivel:hover{
+	background-color: white;
+	color: red;
+}
+
+#derrota{
+	width:400px;
+	height: 400px;
+	border: solid black;
+	position: absolute;
+	left: 500px;
+	top: 100px;
+	font-size: 40px;
+	background-color: red;
+	color: white;
+}
+
+#derrota:hover{
+	background-color: white;
+	color: red;
+}
+
+.imgEvento{
+width:100px;
+height:100px;
 }
 
 .acciones{
@@ -107,10 +170,10 @@
 
 #DatosJugador{
 	width:650px;
-	height:100px;
+	height:150px;
 	border: solid black;
 	position: absolute;
-	top:670px;
+	top:625px;
 	left:80px;
 }
 
@@ -122,6 +185,12 @@
 	font-size:20px;
 	text-align:center;
 }
+
+#CantOro{
+font-size:20px;
+text-align:center;
+}
+
 
 #jugador {
     width: 50px;
@@ -139,27 +208,190 @@
     border: 1px solid #000;
 }
 
-#goblin1{
+#ene1{
     position: absolute;
     left: 100px;
     top: 500px;
 }
 
-#goblin2{
+#ene2{
     position: absolute;
     left: 800px;
     top: 500px;
 }
 
-#goblin3{
+#ene3{
     position: absolute;
     left: 900px;
     top: 0px;
 }
 
-#orco1{
+#ene4{
     position: absolute;
     left: 1200px;
     top: 500px;
+}
+
+#boss{
+    position: absolute;
+	top:250px;
+	left: 1200px;
+	border: 1px solid #000;	
+}
+
+#imgBoos{
+ width:50;
+ height:50;
+}
+
+
+#pared1{
+ background-color:black;
+ height:500px;
+ width:100px;
+ position: absolute;
+ left:500px;
+}
+
+#pelea{
+background-color: black;
+ width:800px;
+ height:500px;
+ position: relative;
+ left: 80px;
+ top: 50px;	 
+}
+
+
+
+
+#llav{
+width:50px;
+ height:50px;
+ position: relative;
+ left: 700px;
+}
+
+#llave{
+width:50px;
+height:50px;
+}
+
+#puert{
+width:50px;
+ height:50px;
+ position: relative;
+ top:200px;
+ left: 1250px;
+}
+
+#puerta{
+width:50px;
+height:50px;
+}
+
+
+#oro1{
+ position: absolute;
+ top:300px;
+ left:0px;
+}
+
+#oro2{
+ position: absolute;
+ top:0px;
+ left: 450px;
+}
+
+#oro3{
+ position: absolute;
+ top:500px;
+ left: 550px;
+}
+
+#oro4{
+ position: absolute;
+ left: 1000px;
+  top:300px;
+}
+
+.oro{
+width:50px;
+height:50px;
+}
+
+#Dados{
+	border:solid black;
+	width:400px;
+	height:400px;
+	position:absolute;
+	left: 950px;
+	top: 60px;
+}
+
+#jugadorPelea{
+ position:absolute;
+ left: 100px;
+ top: 50px;	 
+}
+#EnemigoPelea{
+ position:absolute;
+ left: 480px;
+ top: 50px;	 
+}
+
+.peleadores{
+background-color: white;
+ width:200px;
+ height:250px;
+}
+#vidaEne{ 
+ position:absolute;
+ left: 510px;
+ top: 305px;
+}
+
+#vidaJuga{
+ position:absolute;
+ left: 110px;
+ top: 305px;
+}
+#nombreJuga{
+ position:absolute;
+ left: 510px;
+ top: 275px;
+}
+
+#nombreEne{
+ position:absolute;
+ left: 110px;
+ top: 275px;
+}
+
+.detalle{
+ color:red;
+ font-size:24px; 
+}
+
+#textFinal{
+font-size:30px;
+}
+
+#Final{
+	width:400px;
+	height: 200px;
+	border: solid black;
+	position: absolute;
+	left: 500px;
+	top: 150px;
+	font-size: 40px;
+	text-align:center;
+}
+
+#resultadosAtack{
+	position: absolute;
+	left: 50px;
+	top: 200px;
+
 }
 
