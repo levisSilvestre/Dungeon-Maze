@@ -403,5 +403,344 @@ if(nivel == 1){
 	}
 
 }
+else if(nivel == 2){
+if (y1==y_ene1 && x1 == x_ene1 ) {
+	  y_ene1 = "eliminado";
+	  x_ene1 = "eliminado";
+	  $("#ene1").hide();
+	  $('#EnemigoPelea').attr("src", 'goblin.jpg');
+	  vidaEne = 10;
+	  atacEne = 5; 
+	  defEne = 11;
+      danEne = 5;
+	  comenzarDuelo();
+
+    }else if(y1 == y_ene2 && x1 ==  x_ene2){
+	    y_ene2 = "eliminado";
+	    x_ene2 = "eliminado";
+	    $("#ene2").hide(); 
+        $('#EnemigoPelea').attr("src", 'orco.jpg');		
+		vidaEne = 20;
+		atacEne = 10; 
+		defEne = 13;
+		danEne = 10;
+		comenzarDuelo();
+
+	}else if(y1 == y_ene3 && x1 == x_ene3){
+	  	y_ene3 = "eliminado";
+	    x_ene3 = "eliminado";
+		$("#ene3").hide();
+		$('#EnemigoPelea').attr("src", 'orco.jpg');
+		vidaEne = 20;
+		atacEne = 10; 
+		defEne = 13;
+		danEne = 10;
+		comenzarDuelo();
+
+	   
+	}else if(y1 == y_ene4 && x1 == x_ene4){
+	  	y_ene4 = "eliminado";
+	    x_ene4 = "eliminado";
+		$("#ene4").hide();
+		$('#EnemigoPelea').attr("src", 'orco.jpg');
+		vidaEne = 20;
+		atacEne = 10; 
+		defEne = 13;
+		danEne = 10;
+	    comenzarDuelo();
+
+	}
+
+}
+else{
+	if (y1==y_ene1 && x1 == x_ene1 ) {
+	  y_ene1 = "eliminado";
+	  x_ene1 = "eliminado";
+	  $("#ene1").hide();
+	  $('#EnemigoPelea').attr("src", 'orco.jpg');
+		vidaEne = 20;
+		atacEne = 10; 
+		defEne = 13;
+		danEne = 10;
+	  comenzarDuelo();
+
+    }else if(y1 == y_ene2 && x1 ==  x_ene2){
+	    y_ene2 = "eliminado";
+	    x_ene2 = "eliminado";
+	    $("#ene2").hide(); 
+        $('#EnemigoPelea').attr("src", 'orco.jpg');		
+		vidaEne = 20;
+		atacEne = 10; 
+		defEne = 13;
+		danEne = 10;
+		comenzarDuelo();
+
+	}else if(y1 == y_ene3 && x1 == x_ene3){
+	  	y_ene3 = "eliminado";
+	    x_ene3 = "eliminado";
+		$("#ene3").hide();
+		$('#EnemigoPelea').attr("src", 'orco.jpg');
+		vidaEne = 20;
+		atacEne = 10; 
+		defEne = 13;
+		danEne = 10;
+		comenzarDuelo();
+
+	   
+	}else if(y1 == y_ene4 && x1 == x_ene4){
+	  	y_ene4 = "eliminado";
+	    x_ene4 = "eliminado";
+		$("#ene4").hide();
+		$('#EnemigoPelea').attr("src", 'orco.jpg');
+		vidaEne = 20;
+		atacEne = 10; 
+		defEne = 13;
+		danEne = 10;
+	    comenzarDuelo();
+
+	}else if(y1 == y_boss && x1 == x_boss){
+	  	y_boss = "eliminado";
+	    x_boss = "eliminado";
+		$("#boss").hide();
+		$('#EnemigoPelea').attr("src", 'boss.gif');
+		vidaEne = 100;
+		atacEne = 13; 
+		defEne = 16;
+		danEne = 10;
+	    comenzarDuelo();
+		estadoBoss = false;
+	}
+
+}
 }
 
+
+
+
+function detectarParedDerecha()
+{
+    if(x1<=400 && y1<500 || y1>=500 || x1>550){
+	 return true;
+	}
+	return false;
+}
+
+function detectarParedIzquierda()
+{
+	if(x1>=650 || x1<=450 || y1>=500){
+	 return true;
+	}
+   return false
+}
+
+function detectarParedArriba()
+{
+	if(x1>=600 || x1<=450 || x1>450 && x1<600 && y1==550){
+	 return true;
+	}
+    return false
+}
+
+function detectarParedAbajo()
+{
+   return true
+}
+
+
+
+function moverEnemigosMapa1(){
+
+		cambiarPosicionEnemigo(x_ene1,y_ene1,1);
+		cambiarPosicionEnemigo(x_ene2,y_ene2,2);
+		cambiarPosicionEnemigo(x_ene3,y_ene3,3);
+		cambiarPosicionEnemigo(x_ene4,y_ene4,4);
+}
+
+
+function moverNinja(direccion)
+{
+if(lucha == false)
+	switch(direccion.keyCode)
+	{
+	case 38: 
+		if( y1 > 0){
+		if(detectarParedArriba()==true){
+		moverEnemigosMapa1();
+		y1-=50;
+		document.getElementById("jugador").style.top=String(y1)+"px";
+		detectarColision() ;
+		}
+		}
+		
+	
+
+
+break;
+	case 37:
+        if( x1 > 0){
+		if(detectarParedIzquierda()==true){
+		moverEnemigosMapa1();
+		x1-=50;
+		document.getElementById("jugador").style.left=String(x1)+"px";
+		detectarColision() ;
+	}
+		
+	}
+
+
+break;
+	case 40:
+
+		if( y1 < 550){
+		if(detectarParedAbajo()==true){
+		moverEnemigosMapa1();
+		y1+=50;
+		document.getElementById("jugador").style.top=String(y1)+"px";
+		detectarColision();
+		}
+	}
+
+
+break;
+	case 39:
+if( x1 < 1250){
+		if(detectarParedDerecha()==true){
+		moverEnemigosMapa1();
+		x1+=50;
+		document.getElementById("jugador").style.left=String(x1)+"px";
+		detectarColision() ;
+		}
+	}
+
+
+break;
+}
+}
+
+
+/* Lanzar Dados */
+
+var cwidth = 400;
+  var cheight = 300;
+  var dicex = 50;
+  var dicey = 50;
+  var dicewidth = 100;
+  var diceheight = 100;
+  var dotrad = 6;
+  var ctx;
+  var dx;
+  var dy;
+  var firstturn = true;
+  var point;
+  var resultadoDados;
+  
+  function throwdice(){
+    var ch = 1+Math.floor(Math.random()*6);
+    resultadoDados = ch;
+    dx = dicex;
+    dy = dicey;
+    drawface(ch);
+    dx = (dicex + 150);
+    ch = 1+Math.floor(Math.random()*6);
+    resultadoDados += ch;
+    drawface(ch);
+ }
+  
+  function drawface(n) {
+    ctx = document.getElementById('canvas').getContext('2d');
+    ctx.lineWidth = 5;
+    ctx.clearRect(dx, dy,dicewidth, diceheight);
+    ctx.strokeRect(dx, dy,dicewidth, diceheight);
+    var dotx;
+    var doty;
+    ctx.fillStyle = "#009966";
+      switch(n){
+        case 1:
+          draw1();
+          break;
+        case 2:
+          draw2();
+          break;
+        case 3:
+          draw2();
+          draw1();
+          break;
+        case 4:
+          draw4();
+          break;
+        case 5:
+          draw4();
+          draw1();
+          break;
+        case 6:
+          draw4();
+          draw2mid();
+          break;
+      }
+  
+  }
+  
+  function draw1(){
+    var dotx;
+    var doty;
+    ctx.beginPath();
+    dotx = dx + .5*dicewidth;
+    doty = dy + .5*diceheight;
+    ctx.arc(dotx,doty,dotrad,0,Math.PI*2,true);
+    ctx.closePath();
+    ctx.fill();
+  }
+  
+  function draw2(){
+    var dotx;
+    var doty;
+    ctx.beginPath();
+    dotx = dx + 3*dotrad;
+    doty = dy + 3*dotrad;
+    ctx.arc(dotx,doty,dotrad,0,Math.PI*2,true);
+    dotx = dx + dicewidth-3*dotrad;
+    doty = dy + diceheight-3*dotrad;
+    ctx.arc(dotx,doty,dotrad,0,Math.PI*2,true);
+    ctx.closePath();
+    ctx.fill();
+    
+  }
+  
+  function draw4(){
+    var dotx;
+    var doty;
+    ctx.beginPath();
+    dotx = dx + 3*dotrad;
+    doty = dy + 3*dotrad;
+    ctx.arc(dotx,doty,dotrad,0,Math.PI*2,true);
+    dotx = dx + dicewidth-3*dotrad;
+    doty = dy + diceheight-3*dotrad;
+    ctx.arc(dotx,doty,dotrad,0,Math.PI*2,true);
+    ctx.closePath();
+    ctx.fill();
+    ctx.beginPath();
+    dotx = dx + 3*dotrad;
+    doty = dy + diceheight-3*dotrad;
+    ctx.arc(dotx,doty,dotrad,0,Math.PI*2,true);
+    dotx = dx + dicewidth-3*dotrad;
+    doty = dy + 3*dotrad;
+    ctx.arc(dotx,doty,dotrad,0,Math.PI*2,true);
+    ctx.closePath();
+    ctx.fill();
+  }
+  
+  function draw2mid(){
+    var dotx;
+    var doty;
+    ctx.beginPath();
+    dotx = dx + 3*dotrad;
+    doty = dy + .5*diceheight;
+    ctx.arc(dotx,doty,dotrad,0,Math.PI*2,true);
+    dotx = dx + dicewidth-3*dotrad;
+    doty = dy + .5*diceheight;
+    ctx.arc(dotx,doty,dotrad,0,Math.PI*2,true);
+    ctx.closePath();
+    ctx.fill();
+	
+	
+  }

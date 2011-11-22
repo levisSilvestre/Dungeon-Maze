@@ -2,7 +2,7 @@ $(document).ready(function(){
 
 
 			$('#guerrero').click(function(){
-					$('#descripcion').text("Guerro:");
+					$('#descripcion').text("Guerrero:");
 					$('#ataque').text("Ataque : 10");
 					$('#defensa').text("Defensa : 14");
 					$('#daño').text("Daño : 15");
@@ -10,7 +10,11 @@ $(document).ready(function(){
 					$('#text').css('background-color','#E6E6FA');
 					$('.personaje').css('border','solid 4px black');
 					$('#tipoJuga').attr("value", 1);
-					$('#guerrero').css('border','solid 4px red')
+					$('#VidaJuga').attr("value", 100);
+					$('#guerrero').css('border','solid 4px red');
+					$('#personajes').css('background-image','url(fondoGuerrero.jpg)');
+					$('#descripcion').css('color','red');
+					$('.descrip').css('color','red');
 
 
 			});
@@ -23,8 +27,11 @@ $(document).ready(function(){
 					$('#vida').text("Vida : 150");
 					$('.personaje').css('border','solid 4px black');
 					$('#tipoJuga').attr("value", 2);
-					$('#clerigo').css('border','solid 4px red')
-
+					$('#VidaJuga').attr("value", 150);
+					$('#clerigo').css('border','solid 4px red');
+					$('#personajes').css('background-image','url(fondoM.jpg)');
+					$('#descripcion').css('color','red');
+					$('.descrip').css('color','red');
 			});
 
 			$('#valkiria').click(function(){
@@ -35,7 +42,11 @@ $(document).ready(function(){
 					$('#vida').text("Vida : 50");
 					$('.personaje').css('border','solid 4px black');
 					$('#tipoJuga').attr("value", 3);
-					$('#valkiria').css('border','solid 4px red')
+					$('#VidaJuga').attr("value", 50);
+					$('#valkiria').css('border','solid 4px red');
+					$('#personajes').css('background-image','url(fondoV.jpeg)');
+					$('#descripcion').css('color','red');
+					$('.descrip').css('color','red');
 			});
 
 
